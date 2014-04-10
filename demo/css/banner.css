@@ -1,0 +1,26 @@
+.bannerjs {
+  background: red;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  max-height: 100px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+}
+.green-bg{
+  background: green;
+  width: 100%;
+  height: 100px;
+}
+.black-bg{
+  background: black;
+  height: 2048px;
+}
+.hidden{
+  max-height: 0;
+}
