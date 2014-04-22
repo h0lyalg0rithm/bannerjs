@@ -13,6 +13,14 @@
     <div class="black-bg"></div>
     <script src="jquery.js"></script>
     <script src="classie.js"></script>
-    <script src="bannerjs.js"></script>
+    <script src="../jq.js"></script>
+    <script>
+      $(function(){
+        $('.bannerjs').banner({onload: function(){alert("SDsds");}});
+        console.log("sds");
+        $('.bannerjs').removebanner();
+      });
+    </script>
+
   </body>
 </html>

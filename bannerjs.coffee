@@ -14,11 +14,20 @@ class Banner
 		setTimeout (()=> @show()), @options.speed
 
 	show:() ->
-		classie.removeClass @el, 'hidden' if classie.hasClass @el, 'hidden'
+		$(@el).removeClass 'hidden'
+		
+	close:() ->
+		$(@el).addClass 'hidden'
 
 
 
-banner = new Banner document.querySelectorAll('.bannerjs')[0],
+banner = new Banner $('.bannerjs')[0],
 	callback: ->
 		alert "sdsdsd"
 	speed: 10
+
+banner.close()
+# close = (obj) ->
+# 	con
+# 	obj.close()
+# setTimeout close banner, 5000

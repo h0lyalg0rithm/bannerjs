@@ -38,20 +38,24 @@
     };
 
     Banner.prototype.show = function() {
-      if (classie.hasClass(this.el, 'hidden')) {
-        return classie.removeClass(this.el, 'hidden');
-      }
+      return $(this.el).removeClass('hidden');
+    };
+
+    Banner.prototype.close = function() {
+      return $(this.el).addClass('hidden');
     };
 
     return Banner;
 
   })();
 
-  banner = new Banner(document.querySelectorAll('.bannerjs')[0], {
+  banner = new Banner($('.bannerjs')[0], {
     callback: function() {
       return alert("sdsdsd");
     },
     speed: 10
   });
+
+  banner.close();
 
 }).call(this);
